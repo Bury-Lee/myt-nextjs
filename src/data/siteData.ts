@@ -12,6 +12,8 @@ export const profileData = {
   platforms: [
     { name: "米画师", id: "第47日份麦芽唐" },
     { name: "画加", id: "第47日份麦芽唐" },
+    { name: "QQ", id: "2543302038" },
+    { name: "QQ群", id: "1051345965" },
   ],
   community:
     "欢迎来戳和pp哦,群里偶尔还抽无偿小福利w,欢迎一起来围观一个画师的成长史，感兴趣的老师们欢迎进群一起聊天w",
