@@ -1,0 +1,99 @@
+// 站点所有数据集中管理
+export const profileData = {
+  homepage_name: "第47日份麦芽唐",
+  alias: "麦芽唐",
+  identity: "在校上学的学生w，努力积攒绘画经验的小画师",
+  abstract:
+    "大家好～这里是第47日份麦芽唐\n目前是在校上学的学生w，还是个努力积攒绘画经验的小画师，感谢各位老师／大人的信任，也承蒙各位大人赏眼赏单()～",
+  notice: "未经允许，严禁抄袭、搬运、转载一切个人创作作品和二创同人作品。",
+  main_products: ["盘泪", "稿件"],
+  details:
+    "约稿部分嘛，只接furry/兽兽的相关稿单。画风可以参考下有兽的画感哦,接单时间不固定（群内实时更新），接稿主要在QQ群，平台（id均为第47日份麦芽唐）偶尔会放橱窗，欢迎来戳和pp哦",
+  platforms: [
+    { name: "米画师", id: "第47日份麦芽唐" },
+    { name: "画加", id: "第47日份麦芽唐" },
+  ],
+  community:
+    "欢迎来戳和pp哦,群里偶尔还抽无偿小福利w,欢迎一起来围观一个画师的成长史，感兴趣的老师们欢迎进群一起聊天w",
+};
+
+// OC描述图标类型映射
+export type OcDescIconName = "settings" | "story" | "coffee" | "diamond" | "smile" | "eye" | "zap";
+
+// 爱好图标类型
+export type HobbyIconName = "tv" | "book" | "plane" | "moon" | "snake" | "cat" | "sparkle";
+
+// 爱好列表
+export const hobbies: { iconName: HobbyIconName; label: string }[] = [
+  { iconName: "tv", label: "追番" },
+  { iconName: "book", label: "看漫画" },
+  { iconName: "plane", label: "旅游" },
+  { iconName: "moon", label: "睡觉" },
+  { iconName: "snake", label: "撸蛇" },
+  { iconName: "cat", label: "撸猫" },
+  { iconName: "sparkle", label: "养OC" },
+];
+
+export const ocList = [
+  {
+    name: "瑭珥-Auralith / Jasper·Aureole",
+    image: "/images/oc-auralith.jpg",
+    descriptions: [
+      {
+        iconName: "settings" as OcDescIconName,
+        title: "设定",
+        text: "角是吸铁石的那种，触碰会被吸走魔力。没有牙齿，舌头吸食进食，可以吃抽象的欲望，也可以吃具体的食物，但不会获得能量，尝个味道。",
+      },
+      {
+        iconName: "story" as OcDescIconName,
+        title: "背景",
+        text: "瑭珥是在魔界出生的一只罕见白化魔羊，在黑压压昏暗的魔界可谓是独树一帜，雪白的身体，喜欢亮晶晶的金银财宝，跟其他魔简直是格格不入。特殊的外表非但没有遭到其他魔的排斥，反倒惹魔注视，到哪里都是被人好奇的对象。（ps：瑭瑭不喜欢这种感觉，出门的时候会穿戴披风斗篷，包裹住自己，但是通常一点用都没有hhhhhh，折腾多了之后，对披风也是情有独钟了，收集了很多亮晶晶好看的披风，听其他魔说是一天一件（假的）",
+      },
+      {
+        iconName: "coffee" as OcDescIconName,
+        title: "习惯",
+        text: "作为一只恶魔，喜欢囤积还是很正常的吧，但是瑭瑭的囤积癖已经是病入膏肓的地步了。在自己的领地更是专门打造了仓库进行储存，对除了自己之外，其他人不可靠近，包括家人。自己的东西占有欲也是非常强哈。痴迷程度大概是经常要在里面才能安心睡着吧。趁瑭瑭不在，我们来看看瑭瑭的宝藏们～是披风n件、金银珠宝n件、假牙n个…",
+      },
+      {
+        iconName: "diamond" as OcDescIconName,
+        title: "彩蛋",
+        text: "现在暂定是两个条件进入恶魔岛，一个是恶魔的许可（亲友恶魔和恶魔的君王），一个是特定的物品（这个看开店的恶魔喜好）。",
+      },
+    ],
+  },
+  {
+    name: "黔曜曜",
+    image: "/images/oc-qianyaoyao.jpg",
+    descriptions: [
+      {
+        iconName: "smile" as OcDescIconName,
+        title: "性格",
+        text: "小傲娇，能动手就不动手，绝对忠诚，干事很利索。似猫似兔，能歌善武，十分好斗。平时话少，不善交际，很靠谱，但也会有孩子气的一面。在四耳族里，武力至上。",
+      },
+      {
+        iconName: "eye" as OcDescIconName,
+        title: "外观",
+        text: "尾巴火焰可变化，耳朵尖尖和背部银灰色的物件都是金属，银灰色的物件可画可不画。",
+      },
+      {
+        iconName: "zap" as OcDescIconName,
+        title: "元素",
+        text: "星星、火焰、盔甲、武器（短刀、飞镖、苦无）。",
+      },
+      {
+        iconName: "story" as OcDescIconName,
+        title: "背景",
+        text: "四耳作为战斗天赋极高的一族，一生追求武力至上，且只效忠一人，唯一的弱点是如果不在成年之前找到自己的目标，会导致内心混沌，失去平衡，直到被心魔吞噬，变成没有思想的行尸走肉。但其实四耳最开始不是四耳，是因为一次世界的重大灾难导致一部分兽族受到诅咒和改变，四耳其实是一种异变。强大的实力，缺陷也很明显，如果不能找到认定的那个人的话，变成行尸走肉难免会对其他种族造成麻烦，但是他们忠诚的属性又颇有口碑。直到现在都在寻找解除诅咒的方法。",
+      },
+    ],
+  },
+];
+
+export const galleryImages = [
+  { src: "/images/work-1.jpg", alt: "作品 1" },
+  { src: "/images/work-2.jpg", alt: "作品 2" },
+  { src: "/images/work-3.jpg", alt: "作品 3" },
+  { src: "/images/work-4.jpg", alt: "作品 4" },
+  { src: "/images/work-5.jpg", alt: "作品 5" },
+  { src: "/images/work-6.jpg", alt: "作品 6" },
+];
