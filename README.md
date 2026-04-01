@@ -38,18 +38,21 @@ myt-nextjs/
 │       └── work-6.jpg             # 作品 6
 ├── src/
 │   ├── app/
+│   │   ├── favicon.ico            # 网站图标
+│   │   ├── globals.css            # 全局样式
 │   │   ├── layout.tsx             # 根布局
 │   │   └── page.tsx               # 首页
 │   ├── components/
-│   │   ├── Header.tsx             # 顶部导航栏
-│   │   ├── Footer.tsx             # 页脚
-│   │   ├── NoticeBar.tsx          # 公告栏
-│   │   ├── ProfileHeader.tsx      # 个人资料头部
 │   │   ├── AboutSection.tsx       # 关于我
-│   │   ├── CommissionSection.tsx  # 作品集
-│   │   ├── CommunitySection.tsx   # 社区互动
+│   │   ├── BackgroundDecor.tsx    # 背景装饰
+│   │   ├── CommissionSection.tsx  # 约稿说明
+│   │   ├── CommunitySection.tsx   # 社交与社群
+│   │   ├── Footer.tsx             # 页脚
 │   │   ├── GallerySection.tsx     # 作品画廊
-│   │   └── Icons.tsx              # SVG 图标组件
+│   │   ├── Icons.tsx              # SVG 图标组件
+│   │   ├── Navbar.tsx             # 顶部导航栏
+│   │   ├── NoticeBar.tsx          # 公告栏
+│   │   └── ProfileHeader.tsx      # 个人资料头部
 │   └── data/
 │       └── siteData.ts            # 站点数据
 ├── next.config.ts                 # Next.js 配置
