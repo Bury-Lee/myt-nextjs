@@ -14,6 +14,8 @@ export const profileData = {
     { name: "画加", id: "第47日份麦芽唐" },
     { name: "QQ", id: "2543302038" },
     { name: "QQ群", id: "1051345965" },
+    { name: "B站", id: "第47日份麦芽唐" },
+    { name: "抖音", id: "第47日份麦芽唐" },
   ],
   community:
     "欢迎来戳和pp哦,群里偶尔还抽无偿小福利w,欢迎一起来围观一个画师的成长史，感兴趣的老师们欢迎进群一起聊天w",
@@ -39,7 +41,8 @@ export const hobbies: { iconName: HobbyIconName; label: string }[] = [
 export const ocList = [
   {
     name: "瑭珥-Auralith / Jasper·Aureole",
-    image: "/images/oc-auralith.jpg",
+    EnglishName: "J\asper·Aureole",
+    image: "/images/oc-JasperAureole.jpg",
     descriptions: [
       {
         iconName: "settings" as OcDescIconName,
@@ -65,6 +68,7 @@ export const ocList = [
   },
   {
     name: "黔曜曜",
+    EnglishName: "InkyShimmer",
     image: "/images/oc-qianyaoyao.jpg",
     descriptions: [
       {
@@ -89,6 +93,34 @@ export const ocList = [
       },
     ],
   },
+  // 以下为预加入的设定
+  // {
+  //   name: "眠栖",
+  //   EnglishName: "Reveri·Nesty",
+  //   image: "/images/oc-ReveriNesty.png",
+  //   descriptions: [
+  //     {
+  //       iconName: "smile" as OcDescIconName,
+  //       title: "性格",
+  //       text: "小傲娇，能动手就不动手，绝对忠诚，干事很利索。似猫似兔，能歌善武，十分好斗。平时话少，不善交际，很靠谱，但也会有孩子气的一面。在四耳族里，武力至上。",
+  //     },
+  //     {
+  //       iconName: "eye" as OcDescIconName,
+  //       title: "外观",
+  //       text: "尾巴火焰可变化，耳朵尖尖和背部银灰色的物件都是金属，银灰色的物件可画可不画。",
+  //     },
+  //     {
+  //       iconName: "zap" as OcDescIconName,
+  //       title: "元素",
+  //       text: "星星、火焰、盔甲、武器（短刀、飞镖、苦无）。",
+  //     },
+  //     {
+  //       iconName: "story" as OcDescIconName,
+  //       title: "背景",
+  //       text: "四耳作为战斗天赋极高的一族，一生追求武力至上，且只效忠一人，唯一的弱点是如果不在成年之前找到自己的目标，会导致内心混沌，失去平衡，直到被心魔吞噬，变成没有思想的行尸走肉。但其实四耳最开始不是四耳，是因为一次世界的重大灾难导致一部分兽族受到诅咒和改变，四耳其实是一种异变。强大的实力，缺陷也很明显，如果不能找到认定的那个人的话，变成行尸走肉难免会对其他种族造成麻烦，但是他们忠诚的属性又颇有口碑。直到现在都在寻找解除诅咒的方法。",
+  //     },
+  //   ],
+  // },
 ];
 
 export const galleryImages = [
