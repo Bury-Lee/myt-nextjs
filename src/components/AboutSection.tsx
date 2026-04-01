@@ -46,7 +46,7 @@ const ocDescIconMap: Record<OcDescIconName, React.FC<{ size?: number; color?: st
 
 export default function AboutSection() {
   return (
-    <section id="about" className="card about-section">
+    <section className="card about-section">
       {/* 爱好 */}
       <div className="hobbies-card">
         <h2 className="section-heading">

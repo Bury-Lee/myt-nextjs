@@ -21,6 +21,7 @@
   --shadow: 0 8px 32px rgba(155, 137, 179, 0.15);
   --radius: 24px;
   --nav-height: 60px;
+  --anchor-offset: 40px;
 }
 
 /* ===== 全局重置 ===== */
@@ -32,7 +33,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: var(--nav-height);
+  scroll-padding-top: var(--anchor-offset);
 }
 
 body {
@@ -43,6 +44,10 @@ body {
   position: relative;
   overflow-x: hidden;
   min-height: 100vh;
+}
+
+.anchor-section {
+  scroll-margin-top: var(--anchor-offset);
 }
 
 /* ===== 动态背景装饰 ===== */
@@ -513,59 +518,136 @@ body {
 /* ===== 灯箱 ===== */
 .lightbox {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.85);
-  z-index: 1000;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 99999;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  padding: 24px;
   cursor: pointer;
-  animation: fadeIn 0.2s ease;
+  animation: lightboxFadeIn 0.25s ease;
+  isolation: isolate;
 }
 
 .lightbox-content {
-  position: relative;
-  max-width: 90vw;
-  max-height: 90vh;
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 72px;
   cursor: default;
 }
 
+.lightbox-image-shell {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: min(92vw, 1600px);
+  max-height: 92vh;
+  animation: lightboxZoomIn 0.28s ease;
+}
+
 .lightbox-content img {
-  max-width: 100%;
-  max-height: 85vh;
+  display: block;
+  max-width: min(92vw, 1600px);
+  max-height: 92vh;
+  width: auto;
+  height: auto;
   border-radius: 12px;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
   object-fit: contain;
 }
 
-.lightbox-close {
+.lightbox-counter {
   position: absolute;
-  top: -40px;
-  right: 0;
-  background: rgba(255, 255, 255, 0.2);
-  border: none;
+  left: 50%;
+  bottom: -18px;
+  transform: translateX(-50%);
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  font-size: 0.85rem;
+  line-height: 1;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.lightbox-close,
+.lightbox-nav {
+  position: fixed;
+  z-index: 100000;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   color: white;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.2s;
+  transition: background 0.2s ease, transform 0.2s ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.lightbox-close {
+  top: 16px;
+  right: 16px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+.lightbox-nav {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+}
+
+.lightbox-nav-prev {
+  left: 18px;
+}
+
+.lightbox-nav-next {
+  right: 18px;
+}
+
+.lightbox-close:hover,
+.lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.28);
+  transform: translateY(-50%) scale(1.04);
 }
 
 .lightbox-close:hover {
-  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.04);
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+@keyframes lightboxFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes lightboxZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* ===== 页脚 ===== */

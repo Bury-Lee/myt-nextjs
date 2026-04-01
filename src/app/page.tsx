@@ -16,23 +16,31 @@ export default function Home() {
       <Navbar />
       <BackgroundDecor />
       <div className="container">
-        {/* 头部/个人简介 */}
-        <ProfileHeader />
+        <section id="profile" className="anchor-section">
+          {/* 头部/个人简介 */}
+          <ProfileHeader />
+        </section>
 
         {/* 通知/版权声明 */}
         <NoticeBar />
 
-        {/* 爱好与OC信息 */}
-        <AboutSection />
+        <section id="about" className="anchor-section">
+          {/* 爱好与OC信息 */}
+          <AboutSection />
+        </section>
 
-        {/* 约稿 + 社交 网格布局 */}
-        <div id="commission" className="grid-layout">
-          <CommissionSection />
-          <CommunitySection />
-        </div>
+        <section id="commission" className="anchor-section">
+          {/* 约稿 + 社交 网格布局 */}
+          <div className="grid-layout">
+            <CommissionSection />
+            <CommunitySection />
+          </div>
+        </section>
 
-        {/* 作品展示 */}
-        <GallerySection />
+        <section id="gallery" className="anchor-section">
+          {/* 作品展示 */}
+          <GallerySection />
+        </section>
 
         {/* 页脚 */}
         <Footer />

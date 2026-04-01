@@ -4,7 +4,7 @@ import { profileData } from "@/data/siteData";
 
 export default function ProfileHeader() {
   return (
-    <header id="profile" className="card profile-header">
+    <header className="card profile-header">
       <div className="avatar-container">
         <img
           src="/images/avatar.png"
