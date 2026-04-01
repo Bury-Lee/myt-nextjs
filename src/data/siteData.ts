@@ -14,6 +14,8 @@ export const profileData = {
     { name: "画加", id: "第47日份麦芽唐" },
     { name: "QQ", id: "2543302038" },
     { name: "QQ群", id: "1051345965" },
+    { name: "B站", id: "第47日份麦芽唐" },
+    { name: "抖音", id: "第47日份麦芽唐" },
   ],
   community:
     "欢迎来戳和pp哦,群里偶尔还抽无偿小福利w,欢迎一起来围观一个画师的成长史，感兴趣的老师们欢迎进群一起聊天w",
@@ -38,8 +40,8 @@ export const hobbies: { iconName: HobbyIconName; label: string }[] = [
 
 export const ocList = [
   {
-    name: "瑭珥-Auralith / Jasper·Aureole",
-    image: "/images/oc-auralith.jpg",
+    name: "瑭珥 - Jasper·Aureole",
+    image: "/images/oc-JasperAureole.jpg",
     descriptions: [
       {
         iconName: "settings" as OcDescIconName,
@@ -64,8 +66,8 @@ export const ocList = [
     ],
   },
   {
-    name: "黔曜曜",
-    image: "/images/oc-qianyaoyao.jpg",
+    name: "黔曜曜 - InkyShimmer",
+    image: "/images/oc-InkyShimmer.jpg",
     descriptions: [
       {
         iconName: "smile" as OcDescIconName,
@@ -86,6 +88,27 @@ export const ocList = [
         iconName: "story" as OcDescIconName,
         title: "背景",
         text: "四耳作为战斗天赋极高的一族，一生追求武力至上，且只效忠一人，唯一的弱点是如果不在成年之前找到自己的目标，会导致内心混沌，失去平衡，直到被心魔吞噬，变成没有思想的行尸走肉。但其实四耳最开始不是四耳，是因为一次世界的重大灾难导致一部分兽族受到诅咒和改变，四耳其实是一种异变。强大的实力，缺陷也很明显，如果不能找到认定的那个人的话，变成行尸走肉难免会对其他种族造成麻烦，但是他们忠诚的属性又颇有口碑。直到现在都在寻找解除诅咒的方法。",
+      },
+    ],
+  },
+  {
+    name: "眠栖 - Reveri·Nesty",
+    image: "/images/oc-ReveriNesty.png",
+    descriptions: [
+      {
+        iconName: "smile" as OcDescIconName,
+        title: "性格",
+        text: "小宅女一枚，性格慵懒的，诞生的大部分时间都在休眠睡觉，常与社会脱节，跟不上时代，被人打趣是老古董会生气，平时看着温温和和不计较，一被说老古董就会暴走。",
+      },
+      {
+        iconName: "eye" as OcDescIconName,
+        title: "外观",
+        text: "银杏小龙，平时盘着一坨睡久了，会形成龙屿（龙的岛屿），原身体型与岛屿不相上下，身上会长出银杏树，树上结的果子使生物延寿千年，还可疗伤。不睡在海里，就在天上一坨飘啊飘。外号叫飘飘眠",
+      },
+      {
+        iconName: "zap" as OcDescIconName,
+        title: "元素",
+        text: "生命力与治愈力量、银杏、巨大、自然",
       },
     ],
   },
