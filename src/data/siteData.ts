@@ -40,8 +40,8 @@ export const hobbies: { iconName: HobbyIconName; label: string }[] = [
 
 export const ocList = [
   {
-    name: "瑭珥-Auralith / Jasper·Aureole",
-    EnglishName: "J\asper·Aureole",
+    name: "瑭珥",
+    EnglishName: "Jasper·Aureole",
     image: "/images/oc-JasperAureole.jpg",
     descriptions: [
       {
@@ -69,7 +69,7 @@ export const ocList = [
   {
     name: "黔曜曜",
     EnglishName: "InkyShimmer",
-    image: "/images/oc-qianyaoyao.jpg",
+    image: "/images/oc-InkyShimmer.jpg",
     descriptions: [
       {
         iconName: "smile" as OcDescIconName,
