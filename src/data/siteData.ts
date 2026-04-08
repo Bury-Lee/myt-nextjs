@@ -114,6 +114,162 @@ export const ocList = [
   },
 ];
 
+export type PricingItem = {
+  id: string;
+  order: string;
+  title: string;
+  price: string;
+  priceDetail?: string;
+  description: string[];
+  extras?: string[];
+  extrasTitle?: string;
+  images: { src: string; alt: string }[];
+};
+
+export type PricingGuideQuestion = {
+  question: string;
+  example: string;
+};
+
+export type PricingColumnLayout = {
+  left: PricingItem["id"][];
+  right: PricingItem["id"][];
+};
+
+export const pricingItems: PricingItem[] = [
+  {
+    id: "headshot",
+    order: "01",
+    title: "大头",
+    price: "底价 69r",
+    priceDetail: "浮动 0 ~ 20r ｜ 自带简易背景",
+    description: [
+      "包含一枚脑袋和两只爪子。",
+      "可以指定动作 ^w^",
+    ],
+    images: [{ src: "/images/pricing/headshot.jpg", alt: "大头例图" }],
+  },
+  {
+    id: "animal-fullbody",
+    order: "02",
+    title: "小动物全身",
+    price: "底价 110r",
+    priceDetail: "浮动 0 ~ 40r ｜ 自带简易背景",
+    description: [
+      "包含一整只小动物。",
+      "画手喜欢大尾巴，所以小尾巴会放大一点。",
+      "可以指定动作 ^w^",
+    ],
+    extrasTitle: "示例组合",
+    extras: ["双兽＋元素背景", "单兽＋元素背景", "单兽＋简易背景"],
+    images: [
+      { src: "/images/pricing/animal-fullbody.jpg", alt: "小动物全身例图" },
+    ],
+  },
+  {
+    id: "mini-q",
+    order: "03",
+    title: "小Q",
+    price: "底价 69r",
+    priceDetail: "浮动 0 ~ 30r ｜ 自带简易背景",
+    description: [
+      "包含一整只小动物。",
+      "画手喜欢大尾巴，所以小尾巴会放大一点。",
+      "可以指定动作 ^w^",
+    ],
+    images: [{ src: "/images/pricing/mini-q.jpg", alt: "小Q例图" }],
+  },
+  {
+    id: "animal-halfbody",
+    order: "04",
+    title: "小动物半身",
+    price: "底价 79r",
+    priceDetail: "浮动 0 ~ 30r ｜ 自带简易背景",
+    description: [
+      "包含一个上半身（到腰部）和尾巴。",
+      "可以指定动作 ^w^",
+    ],
+    images: [],
+  },
+  {
+    id: "tiny-nosega",
+    order: "05",
+    title: "毛绒小鼻嘎",
+    price: "底价 30r",
+    priceDetail: "浮动 0 ~ 10r",
+    description: [
+      "包含很小鼻嘎的小动物。",
+      "可以指定动作 ^w^",
+    ],
+    images: [
+      { src: "/images/pricing/tiny-nosega-1.jpg", alt: "毛绒小鼻嘎例图 1" },
+      { src: "/images/pricing/tiny-nosega-2.jpg", alt: "毛绒小鼻嘎例图 2" },
+      { src: "/images/pricing/tiny-nosega-3.jpg", alt: "毛绒小鼻嘎例图 3" },
+    ],
+  },
+  {
+    id: "design-refresh",
+    order: "06",
+    title: "设定图",
+    price: "底价 300r",
+    priceDetail: "浮动 0 ~ 200r ｜ 自带简易背景",
+    description: [
+      "包含底色版和简单二分版两种版本。",
+      "包含正比正面和背面、小鼻嘎正面和背面，以及设定分解。",
+      "设定分解可按需求指定分解的部分，例如饰品、衣物、花纹等。",
+      "不接纯文字设和重新设计，仅接受旧设定图或详细图片设定作为翻新基础。",
+      "若需添加或更改小部分设定，需要提供详细参考图和他卡。",
+    ],
+    images: [
+      { src: "/images/pricing/design-sheet-1.jpg", alt: "设定图例图 1" },
+      { src: "/images/pricing/design-sheet-2.png", alt: "设定图例图 2" },
+    ],
+  },
+  {
+    id: "business-card",
+    order: "07",
+    title: "来一张名片",
+    price: "底价 220r",
+    priceDetail: "浮动 0 ~ 180r",
+    description: [
+      "包含一张正面（半身为主）和一张背面（两枚小鼻嘎）。",
+      "请提供 2 ~ 3 个元素。",
+      "可以指定动作 ^w^",
+    ],
+    images: [
+      { src: "/images/pricing/business-card-1.jpg", alt: "名片例图 1" },
+      { src: "/images/pricing/business-card-2.jpg", alt: "名片例图 2" },
+    ],
+  },
+];
+
+export const pricingColumnLayout: PricingColumnLayout = {
+  left: ["headshot", "mini-q", "tiny-nosega"],
+  right: ["animal-fullbody", "animal-halfbody", "design-refresh", "business-card"],
+};
+
+export const pricingGuideQuestions: PricingGuideQuestion[] = [
+  {
+    question: "Q1：大人想要什么样的业务呢？",
+    example: "例：生贺（一个小动物半身，一个小鼻嘎）／大场景（两个小动物全身）",
+  },
+  {
+    question: "Q2：动作有没有要求呢？",
+    example: "例：需要互动、抱抱、贴贴，或者想要能露出肉垫的动作。",
+  },
+  {
+    question: "Q3：可能还要提供一些元素嗷。",
+    example: "例：跟孩子相关的元素／喜欢的东西，比如蓝莓、甜品、水等。",
+  },
+  {
+    question: "Q4：画布尺寸有没有要求呢？",
+    example: "例：如果稿件要用作电脑壁纸，可以提前说明尺寸需求。",
+  },
+];
+
+export const pricingGuideNote =
+  "以上这些问题可以先提前想想哦，等画到的时候会私信小窗沟通，再根据你的要求进行最终定价 ^w^";
+
 export const galleryImages = [
   { src: "/images/work-1.jpg", alt: "作品 1" },
   { src: "/images/work-2.jpg", alt: "作品 2" },

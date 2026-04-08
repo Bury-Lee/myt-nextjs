@@ -43,6 +43,14 @@ export const GalleryIcon: React.FC<IconProps> = ({ size = 18, color = "currentCo
   </svg>
 );
 
+// 价目表图标
+export const PriceTagIcon: React.FC<IconProps> = ({ size = 18, color = "currentColor", className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M20.59 13.41L11 3H4v7l9.59 9.59a2 2 0 0 0 2.82 0l4.18-4.18a2 2 0 0 0 0-2.82z" />
+    <circle cx="7.5" cy="7.5" r="1.5" />
+  </svg>
+);
+
 export const ChevronLeftIcon: React.FC<IconProps> = ({ size = 18, color = "currentColor", className }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" className={className}>
     <path d="M15 18l-6-6 6-6" />

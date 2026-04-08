@@ -1,5 +1,3 @@
-"use client";
-
 import Navbar from "@/components/Navbar";
 import BackgroundDecor from "@/components/BackgroundDecor";
 import ProfileHeader from "@/components/ProfileHeader";

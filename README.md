@@ -1,151 +1,230 @@
-# 麦芽唐 - 个人网站
+# 第47日份麦芽唐 · 个人作品站
 
-一个基于 Next.js 16 构建的静态个人作品集网站，展示插画、OC 设定和作品集。
+一个基于 **Next.js 16 + TypeScript + Tailwind CSS v4** 构建的静态个人网站，用于展示画师主页、OC 设定、作品集与约稿价目表。
 
-##  功能特性
+项目当前包含两个主要页面：
 
--  **作品展示** - 瀑布流布局展示插画作品
--  **个人简介** - 展示头像、关于信息、兴趣爱好
--  **社区互动** - 展示社交媒体链接
--  **响应式设计** - 完美适配桌面和移动端
--  **静态导出** - 可部署到任何静态托管服务
+- `/`：首页，包含个人介绍、关于、约稿说明、社交信息与作品集
+- `/pricing/`：独立价目表页面，展示各类稿件、说明与示例图
 
-##  技术栈
+## 项目特性
 
-- **框架**: Next.js 16 (App Router)
-- **语言**: TypeScript
-- **样式**: Tailwind CSS
-- **字体**: 汉唐字体 (HanTang.woff2)
-- **图标**: 内置 SVG 图标组件
-- **部署**: 静态导出 (Static Export)
+- **静态导出**：已启用 `output: 'export'`，可直接部署到静态托管平台
+- **双页面结构**：首页与价目表独立拆分，便于维护与扩展
+- **统一视觉风格**：导航、背景装饰、卡片、字体与配色保持一致
+- **响应式布局**：适配桌面端与移动端浏览
+- **作品灯箱预览**：支持大图查看、切换与键盘操作
+- **价目表示例预览**：支持多张例图展示与放大预览
+- **数据集中管理**：主要内容集中在 `src/data/siteData.ts`
 
-##  项目结构
+## 技术栈
 
-```
-myt-nextjs/
-├── public/
-│   ├── fonts/
-│   │   └── HanTang.woff2          # 汉唐字体文件
-│   └── images/
-│       ├── avatar.png             # 头像
-│       ├── oc-auralith.jpg        # OC 瑭珥
-│       ├── oc-qianyaoyao.jpg      # OC 黔曜曜
-│       ├── work-1.jpg             # 作品 1
-│       ├── work-2.jpg             # 作品 2
-│       ├── work-3.jpg             # 作品 3
-│       ├── work-4.jpg             # 作品 4
-│       ├── work-5.jpg             # 作品 5
-│       └── work-6.jpg             # 作品 6
-├── src/
-│   ├── app/
-│   │   ├── favicon.ico            # 网站图标
-│   │   ├── globals.css            # 全局样式
-│   │   ├── layout.tsx             # 根布局
-│   │   └── page.tsx               # 首页
-│   ├── components/
-│   │   ├── AboutSection.tsx       # 关于我
-│   │   ├── BackgroundDecor.tsx    # 背景装饰
-│   │   ├── CommissionSection.tsx  # 约稿说明
-│   │   ├── CommunitySection.tsx   # 社交与社群
-│   │   ├── Footer.tsx             # 页脚
-│   │   ├── GallerySection.tsx     # 作品画廊
-│   │   ├── Icons.tsx              # SVG 图标组件
-│   │   ├── Navbar.tsx             # 顶部导航栏
-│   │   ├── NoticeBar.tsx          # 公告栏
-│   │   └── ProfileHeader.tsx      # 个人资料头部
-│   └── data/
-│       └── siteData.ts            # 站点数据
-├── next.config.ts                 # Next.js 配置
-├── tailwind.config.ts             # Tailwind CSS 配置
-├── tsconfig.json                  # TypeScript 配置
-└── package.json                   # 项目依赖
-```
+- **框架**：Next.js 16（App Router）
+- **语言**：TypeScript
+- **样式**：Tailwind CSS v4 + 全局 CSS
+- **运行时**：React 19
+- **构建方式**：Static Export
 
-##  快速开始
+## 快速开始
 
-### 安装依赖
+### 1. 安装依赖
 
 ```bash
 npm install
 ```
 
-### 开发模式
+如果你使用 pnpm，也可以执行：
+
+```bash
+pnpm install
+```
+
+### 2. 启动开发环境
 
 ```bash
 npm run dev
 ```
 
-访问 [http://localhost:3000](http://localhost:3000) 查看网站。
+默认访问地址：
 
-### 构建生产版本
+- http://localhost:3000/
+- http://localhost:3000/pricing/
+
+### 3. 构建生产版本
 
 ```bash
 npm run build
 ```
 
-### 预览生产版本
+静态导出结果默认生成在 `out/` 目录。
+
+### 4. 本地预览
+
+如果你使用的是 Next.js 生产服务：
 
 ```bash
 npm start
 ```
 
-##  部署
+如果你需要预览静态导出结果，建议使用任意静态服务器打开 `out/` 目录。
 
-本项目使用静态导出，可以部署到任何静态托管服务：
+## 常用脚本
 
-- **Vercel**: 推荐部署平台
-- **Netlify**: 支持静态站点
-- **GitHub Pages**: 免费静态托管
-- **Cloudflare Pages**: 快速部署
-- **其他**: 任何支持静态 HTML 的服务器
-
-### 部署到 Vercel
-
-1. 将代码推送到 GitHub
-2. 在 [Vercel](https://vercel.com) 导入项目
-3. Vercel 会自动检测 Next.js 项目并部署
-
-### 部署到 Netlify
-
-1. 将代码推送到 GitHub
-2. 在 [Netlify](https://netlify.com) 导入项目
-3. 构建命令: `npm run build`
-4. 发布目录: `out` (或 `dist`)
-
-##  自定义
-
-### 修改站点数据
-
-编辑 `src/data/siteData.ts` 文件，可以修改：
-- 个人信息（头像、昵称、简介）
-- 作品集内容
-- 社交媒体链接
-- 公告内容
-
-### 修改样式
-
-编辑 `src/app/globals.css` 文件，可以修改：
-- 全局颜色主题
-- 字体设置
-- 布局样式
-
-### 添加新作品
-
-1. 将图片文件放入 `public/images/` 目录
-2. 在 `src/data/siteData.ts` 的 `galleryImages` 数组中添加新作品信息
-
-```typescript
-{ src: "/images/work-new.jpg", alt: "作品名称" },
+```bash
+npm run dev    # 启动开发环境
+npm run build  # 构建并导出静态站点
+npm run start  # 启动生产服务
+npm run lint   # 执行 ESLint 检查
 ```
 
-##  许可证
+## 项目结构
 
-本项目仅供个人学习使用。
+```text
+myt-nextjs/
+├── public/
+│   ├── fonts/
+│   │   └── HanTang.woff2
+│   └── images/
+│       ├── avatar.png
+│       ├── oc-InkyShimmer.jpg
+│       ├── oc-JasperAureole.jpg
+│       ├── oc-ReveriNesty.png
+│       ├── pricing/
+│       │   └── ... 价目表示例图
+│       └── work-*.jpg
+├── src/
+│   ├── app/
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   └── pricing/
+│   │       └── page.tsx
+│   ├── components/
+│   │   ├── Navbar.tsx
+│   │   ├── ProfileHeader.tsx
+│   │   ├── AboutSection.tsx
+│   │   ├── CommissionSection.tsx
+│   │   ├── CommunitySection.tsx
+│   │   ├── GallerySection.tsx
+│   │   ├── PricingSection.tsx
+│   │   └── ...
+│   └── data/
+│       └── siteData.ts
+├── next.config.ts
+├── package.json
+└── README.md
+```
 
-##  感谢 & 贡献
+## 数据维护说明
 
-感谢：本项目页面样式沿用[https://github.com/Bury-Lee/bury-lee](https://github.com/Bury-Lee/bury-lee)项目样式
+项目主要内容集中在 `src/data/siteData.ts`，包括：
 
-欢迎提交 Issue 和 Pull Request！
+- `profileData`：主页展示的个人信息与平台信息
+- `hobbies`：爱好标签
+- `ocList`：OC 设定内容
+- `galleryImages`：作品集图片
+- `pricingItems`：价目表卡片数据
+- `pricingColumnLayout`：桌面端价目表左右列分配
+- `pricingGuideQuestions` / `pricingGuideNote`：价目表问答区内容
 
----
+### 维护价目表时的建议
+
+#### 1. 新增或修改价目项
+直接编辑 `pricingItems`：
+
+```ts
+{
+  id: "headshot",
+  order: "01",
+  title: "大头",
+  price: "底价 69r",
+  priceDetail: "浮动 0 ~ 20r ｜ 自带简易背景",
+  description: ["包含一枚脑袋和两只爪子。"],
+  images: [{ src: "/images/pricing/headshot.jpg", alt: "大头例图" }],
+}
+```
+
+#### 2. 调整桌面端左右列顺序
+直接编辑 `pricingColumnLayout`：
+
+```ts
+export const pricingColumnLayout = {
+  left: ["headshot", "mini-q", "tiny-nosega"],
+  right: ["animal-fullbody", "animal-halfbody", "design-refresh", "business-card"],
+};
+```
+
+这里使用的是稳定的 `id`，不是展示编号 `order`，因此后续调整排序或文案时更安全。
+
+#### 3. 添加价目表示例图
+将素材放到：
+
+```text
+public/images/pricing/
+```
+
+然后在对应 `pricingItems[].images` 中填写图片路径即可。
+
+## 页面说明
+
+### 首页 `/`
+
+首页由多个 section 组成：
+
+- `#profile`：个人头部
+- `#about`：关于与 OC 展示
+- `#commission`：约稿说明与社群信息
+- `#gallery`：作品画廊
+
+### 价目表 `/pricing/`
+
+价目表页面复用了站点统一的：
+
+- 顶部导航
+- 背景装饰
+- 页脚
+
+并额外包含：
+
+- 价目卡片
+- 示例图预览灯箱
+- 问答式约稿说明区
+
+## 部署说明
+
+由于项目启用了：
+
+```ts
+output: "export"
+```
+
+因此适合部署到任意静态托管平台，例如：
+
+- Vercel
+- Netlify
+- GitHub Pages
+- Cloudflare Pages
+- Nginx / Apache 静态目录
+
+### 部署后注意事项
+
+- 当前配置已开启 `trailingSlash: true`
+- 静态导出后页面会生成到 `out/`
+- 如果部署到子路径，需要额外确认静态资源路径与访问前缀配置
+
+## 开发建议
+
+- 站点内容优先维护在 `siteData.ts`，尽量避免把文案散落到组件里
+- 新增页面时尽量复用 `Navbar`、`BackgroundDecor`、`Footer`，保持风格统一
+- 如果修改锚点结构，建议同时检查 `page.tsx` 中各 section 的 `id` 挂载位置
+- 修改图片资源后，记得检查静态导出结果中的路径是否正常
+
+## 致谢
+
+本项目页面风格参考并沿用了：
+
+- [Bury-Lee / bury-lee](https://github.com/Bury-Lee/bury-lee)
+
+## License
+
+本项目主要用于个人展示与学习，请在尊重原作者与素材版权的前提下使用。
