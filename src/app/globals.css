@@ -978,6 +978,174 @@ footer {
   line-height: 1.8;
 }
 
+/* === 未成年人警告条款（顶部） === */
+.pricing-minor-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: linear-gradient(135deg, rgba(255, 152, 0, 0.12), rgba(255, 87, 34, 0.10));
+  border: 1.5px solid rgba(255, 152, 0, 0.35);
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  color: #7a4a00;
+}
+
+.pricing-minor-notice-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #e65100;
+}
+
+.pricing-minor-notice-content {
+  line-height: 1.7;
+  font-size: 0.92rem;
+}
+
+.pricing-minor-notice-title {
+  font-weight: bold;
+  font-size: 0.96rem;
+  margin-bottom: 4px;
+  color: #bf360c;
+}
+
+/* === 完整约稿注意事项（底部卡片） === */
+.pricing-terms-card {
+  background: rgba(255, 255, 255, 0.68);
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid rgba(155, 137, 179, 0.12);
+  margin-top: 24px;
+}
+
+.pricing-terms-heading {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #4a4a4a;
+  font-size: 1.08rem;
+  margin-bottom: 6px;
+}
+
+.pricing-terms-slogan {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.pricing-terms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pricing-terms-item {
+  background: rgba(155, 137, 179, 0.06);
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+
+.pricing-terms-item-title {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #4a4a4a;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pricing-terms-item-number {
+  color: var(--primary-color);
+  font-weight: bold;
+  min-width: 22px;
+}
+
+.pricing-terms-item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.pricing-terms-item-list li {
+  position: relative;
+  padding-left: 16px;
+  line-height: 1.7;
+  color: var(--text-main);
+  font-size: 0.9rem;
+}
+
+.pricing-terms-item-list li::before {
+  content: "·";
+  position: absolute;
+  left: 4px;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* 重要说明 */
+.pricing-terms-notes {
+  margin-top: 20px;
+  background: rgba(155, 137, 179, 0.08);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.pricing-terms-notes-title {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #4a4a4a;
+  margin-bottom: 10px;
+}
+
+.pricing-terms-note {
+  line-height: 1.7;
+  color: var(--text-main);
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.pricing-terms-note:last-child {
+  margin-bottom: 0;
+}
+
+.pricing-terms-note-label {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* 底部未成年人条款（约稿注意事项卡片内） */
+.pricing-terms-minor {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+  background: linear-gradient(135deg, rgba(255, 152, 0, 0.08), rgba(255, 87, 34, 0.06));
+  border: 1px solid rgba(255, 152, 0, 0.25);
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: #7a4a00;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.pricing-terms-minor-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #e65100;
+}
+
+.pricing-terms-minor-title {
+  font-weight: bold;
+  font-size: 0.92rem;
+  margin-bottom: 2px;
+  color: #bf360c;
+}
+
 @media (max-width: 768px) {
   .pricing-page-container {
     max-width: 900px;
@@ -1024,5 +1192,18 @@ footer {
 
   .pricing-guide-card {
     padding: 18px;
+  }
+
+  .pricing-terms-card {
+    padding: 18px;
+  }
+
+  .pricing-minor-notice {
+    padding: 14px 16px;
+    font-size: 0.88rem;
+  }
+
+  .pricing-terms-item {
+    padding: 12px 14px;
   }
 }

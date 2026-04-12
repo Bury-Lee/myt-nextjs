@@ -7,6 +7,11 @@ import {
   pricingGuideNote,
   pricingGuideQuestions,
   pricingItems,
+  minorProtectionNotice,
+  commissionTermsTitle,
+  commissionTermsSlogan,
+  commissionTermsList,
+  commissionNotes,
   type PricingItem,
 } from "@/data/siteData";
 import {
@@ -14,6 +19,8 @@ import {
   ChevronRightIcon,
   MessageIcon,
   PriceTagIcon,
+  AlertIcon,
+  FileTextIcon,
 } from "@/components/Icons";
 
 type PricingImage = {
@@ -329,6 +336,17 @@ export default function PricingSection() {
         </div>
       </div>
 
+      {/* 未成年人警告条款 */}
+      <div className="pricing-minor-notice">
+        <div className="pricing-minor-notice-icon">
+          <AlertIcon size={20} color="currentColor" />
+        </div>
+        <div className="pricing-minor-notice-content">
+          <p className="pricing-minor-notice-title">{minorProtectionNotice.title}</p>
+          <p>{minorProtectionNotice.content}</p>
+        </div>
+      </div>
+
       {isMobileLayout ? (
         <div className="pricing-grid pricing-grid-mobile" role="list">
           {mobileItems.map((item) => (
@@ -386,6 +404,51 @@ export default function PricingSection() {
           ))}
         </div>
         <p className="pricing-guide-note">{pricingGuideNote}</p>
+      </div>
+
+      {/* 完整约稿注意事项 */}
+      <div className="pricing-terms-card">
+        <h3 className="pricing-terms-heading">
+          <FileTextIcon size={18} color="var(--primary-color)" />
+          {commissionTermsTitle}
+        </h3>
+        <p className="pricing-terms-slogan">{commissionTermsSlogan}</p>
+
+        <div className="pricing-terms-list">
+          {commissionTermsList.map((term, index) => (
+            <div className="pricing-terms-item" key={term.title}>
+              <h4 className="pricing-terms-item-title">
+                <span className="pricing-terms-item-number">{index + 1}.</span>
+                {term.title}
+              </h4>
+              <ul className="pricing-terms-item-list">
+                {term.items.map((text) => (
+                  <li key={text}>{text}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div className="pricing-terms-notes">
+          <h4 className="pricing-terms-notes-title">重要说明</h4>
+          {commissionNotes.map((note, index) => (
+            <p className="pricing-terms-note" key={note}>
+              <span className="pricing-terms-note-label">注 {index + 1}：</span>
+              {note}
+            </p>
+          ))}
+        </div>
+
+        <div className="pricing-terms-minor">
+          <div className="pricing-terms-minor-icon">
+            <AlertIcon size={16} color="currentColor" />
+          </div>
+          <div>
+            <p className="pricing-terms-minor-title">{minorProtectionNotice.title}</p>
+            <p>{minorProtectionNotice.content}</p>
+          </div>
+        </div>
       </div>
 
       {hasLightbox && lightboxIndex !== null && lightboxImages.length > 0 && (
