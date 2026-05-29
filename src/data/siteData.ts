@@ -241,11 +241,29 @@ export const pricingItems: PricingItem[] = [
       { src: "/images/pricing/business-card-2.jpg", alt: "名片例图 2" },
     ],
   },
+  {
+    id: "metal-badge",
+    order: "08",
+    title: "你值得拥有的仿金属徽章业务",
+    price: "待解锁",
+    priceDetail: "敬请期待",
+    description: [
+      "精致仿金属质感徽章设计",
+      "可定制独特造型与主题",
+      "适合收藏与展示",
+    ],
+    images: [
+      { src: "/images/pricing/Metal-badge-texture-1.png", alt: "仿金属徽章例图 1" },
+      { src: "/images/pricing/Metal-badge-texture-2.png", alt: "仿金属徽章例图 2" },
+      { src: "/images/pricing/Metal-badge-texture-3.png", alt: "仿金属徽章例图 3" },
+      { src: "/images/pricing/Metal-badge-texture-4.png", alt: "仿金属徽章例图 4" },
+    ],
+  },
 ];
 
 export const pricingColumnLayout: PricingColumnLayout = {
-  left: ["headshot", "mini-q", "tiny-nosega"],
-  right: ["animal-fullbody", "animal-halfbody", "design-refresh", "business-card"],
+  left: ["headshot", "mini-q", "tiny-nosega", "business-card"],
+  right: ["animal-fullbody", "animal-halfbody", "design-refresh", "metal-badge"],
 };
 
 export const pricingGuideQuestions: PricingGuideQuestion[] = [
